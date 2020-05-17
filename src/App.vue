@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <button @click="switchLanguage">switch language</button>
+    <p>{{ $t('hello') }}</p>
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
@@ -12,6 +14,16 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  methods: {
+    switchLanguage : function() {
+      let locale = this.$i18n.locale;
+      if(locale==="en") {
+        this.$i18n.locale = "da";
+        return;
+      }
+      this.$i18n.locale = "en";
+    }
   }
 }
 </script>

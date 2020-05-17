@@ -1,5 +1,7 @@
 # il18n-demo
 
+###Simple demo of the il18n internationalization plugin for vue.js
+
 ## Project setup
 ```
 npm install
